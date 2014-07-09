@@ -31,4 +31,15 @@ end
 
 def build_message_for(outcome)
   #TODO: return specific message depending on the game outcome (= bank's score and user's score)
+  if outcome[1] > 21
+    "you are over 21 ! you loose"
+  elsif outcome[1] == 21
+    "Black_Jack"
+  elsif
+    outcome[1] < outcome[0]
+    "Bank beats you ! You loose"
+  else
+    "You beat the bank ! You win"
+
+end
 end
