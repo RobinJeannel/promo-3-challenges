@@ -1,0 +1,12 @@
+puts "What is your name?"
+first_name = gets.chomp
+
+puts "Whats is your last name?"
+last_name = gets.chomp
+
+puts "What is your middle_name?"
+middle_name = gets.chomp
+
+name = "#{first_name} #{last_name} #{middle_name}"
+puts "Hello #{name}"
+
