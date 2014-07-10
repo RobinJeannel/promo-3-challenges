@@ -74,7 +74,6 @@ def sorted_pairs(array)
 result
 end
 
-p sorted_pairs(["c", "z", "d"])
 
 
 
