@@ -37,8 +37,6 @@ products = {
 
 orders.each do
 
-
-
 end
 
 
