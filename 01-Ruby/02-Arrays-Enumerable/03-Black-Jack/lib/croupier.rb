@@ -21,10 +21,10 @@ def asking_for_card?(score)
 puts  "Card ? (type 'Y' or 'yes' for a new card)"
 player_answer = gets.chomp
 
-if player_answer == "Y" || player_answer == "yes"
-  return true
-else
-  return false
+  if player_answer == "Y" || player_answer == "yes"
+    return true
+  else
+    return false
 end
 
 end
