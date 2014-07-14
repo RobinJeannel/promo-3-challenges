@@ -44,6 +44,8 @@ def calories_counter(*orders)
   return total
 end
 
+
+orders.count
 calories_counter("Big Mac", "Potatoes", "Coca", "Happy Meal")
 
 
