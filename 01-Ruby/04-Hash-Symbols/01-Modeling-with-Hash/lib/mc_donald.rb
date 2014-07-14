@@ -45,7 +45,5 @@ def calories_counter(*orders)
 end
 
 
-orders.count
-calories_counter("Big Mac", "Potatoes", "Coca", "Happy Meal")
 
 
