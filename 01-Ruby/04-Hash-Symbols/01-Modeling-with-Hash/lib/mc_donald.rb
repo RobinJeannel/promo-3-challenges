@@ -10,7 +10,7 @@ products = {
   "French fries" => 130,
   "Potatoes" => 130,
   "Coca" => 160,
-  "Sprite" => 170
+  "Sprite" => 170,
 }
 
 total = products[burger] + products[side] + products[beverage]
@@ -21,6 +21,8 @@ end
 ##############################################################################
 def calories_counter(*orders)
   #TODO: return number of calories for a less constrained order
+ total = 0
+
   products = {
     "Cheese Burger" => 290,
     "Big Mac" => 300,
@@ -30,16 +32,18 @@ def calories_counter(*orders)
     "Potatoes" => 130,
     "Coca" => 160,
     "Sprite" => 170,
-    "Happy Meal" => poor_calories_counter("Cheese Burger", "French fries", "Coca"),
-    "Best Of Big Mac" => poor_calories_counter("Big Mac", "French fries", "Coca"),
-    "Best Of Royal Cheese" => poor_calories_counter("Royal Cheese", "Potatoes", "Sprite")
+    "Happy Meal" => 580,
+    "Best Of Big Mac" => 590,
+    "Best Of Royal Cheese" => 430,
   }
 
-  orders.each do
-
+  orders.each do |element|
+    #products[element]
+    total += products[element]
   end
-
+  return total
 end
 
+calories_counter("Big Mac", "Potatoes", "Coca", "Happy Meal")
 
 
