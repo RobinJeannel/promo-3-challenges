@@ -8,6 +8,5 @@ def french_phone_number?(phone_number)
   end
 end
 
-end
 
 
