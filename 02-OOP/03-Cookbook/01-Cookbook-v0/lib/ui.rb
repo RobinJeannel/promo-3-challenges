@@ -1,4 +1,46 @@
 class UI
+
+  def ask_add_recipe
+    puts "please add a recipe"
+    recipe = gets.chomp
+    return recipe
+  end
+
+
+  def delete_recipe
+  puts "wich recipe do you to delete"
+    index = gets.chomp.to_i
+    return index
+  end
+
+  def display_recipes(recipes)
+    recipes.each_with_index do |recipe, index|
+    puts "#{index} #{recipe}"
+  end
+end
+
+array_test= ["chips", "fish"]
+ui=Ui.new
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
   TASKS = {
     list: "- List all recipes [list]",
     add:  "- Add a new recipe [add]",
@@ -16,7 +58,7 @@ class UI
     # TODO: format and display the retrieved data in a numbered list
   end
 
-  def add
+  def add()
     # TODO: ask the user a recipe name
     # TODO: call the appropriate controller method with the proper argument(s)
   end
@@ -71,3 +113,5 @@ class UI
     self.send(task.to_sym)
   end
 end
+=end
+
