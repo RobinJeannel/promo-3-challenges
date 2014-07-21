@@ -1,12 +1,24 @@
 require_relative 'cookbook'
+require_relative 'ui'
 
 class Controller
-  def initialize(file)
-    # Here you should instantiate the Cookbook model with the file
-  @ui = Ui.new
-  @cookbook = Cookbook.new
+  def initialize(cookbook)
+    @cookbook = cookbook
+    @ui = UI.new
   end
 
-  # TODO: Implement the methods to retrieve, add, and delete recipes through the model
-def
+  def list
+    recipes = @cookbook.all_recipes
+    @ui.ask_display_recipes(recipes)
+  end
+
+  def create
+    recipe = @ui.ask_add_recipe
+    @cookbook.add_a_recipe(recipe)
+  end
+
+  def destroy
+    index = @ui.delete_a_recipe
+    @cookbook.remove_recipe(index)
+  end
 end

@@ -1,13 +1,14 @@
 require 'csv'
+require_relative 'recipe'
 
 class Cookbook
-attr_reader :list_recipes
+  attr_reader :recipes
 
   def initialize(file)
     # TODO: Retrieve the data from your CSV file and store it in an instance variable
-  @file = file
-  @list_recipes = []
-  retrieve
+    @file = file
+    @recipes = []
+    retrieve
   end
 
   # TODO: Implement the methods to retrieve all recipes, create, or destroy recipes
@@ -16,34 +17,34 @@ attr_reader :list_recipes
 
   def retrieve
     CSV.foreach(@file) do |row|
-      @list_recipes << row[0]
+      @recipes << [row[0], row[1]]
     end
   end
 
-  def create(recipe)
-    @list_recipes << recipe
-
-    CSV.open(@file, 'w') do |csv|
-      @list_recipes.each do |recipe|
-        csv << [recipe]
-      end
-    end
+  def list_of_all_recipes
+    @recipes
   end
 
-  def destroy(recipe)
-    @list_recipes.delete(recipe)
+  def add_recipe(recipe)
+    @recipes << [recipe.name, recipe.description]
 
-    CSV.open(@file, 'w') do |csv|
+    save
+  end
 
-        @list_recipes.each do |recipe|
-          csv << [recipe]
+  def remove_recipe(index)
+    @recipes.delete_at(index)
+
+    save
+  end
+
+  def save
+    CSV.open(@file, 'w', col_sep: ',') do |csv|
+      @recipes.each do |recipe|
+        csv << recipe
       end
     end
   end
 
 end
 
-cookbook = Cookbook.new('recipes.csv')
-cookbook.create('fish')
-cookbook.create('chips')
-cookbook.destroy('chips')
+
