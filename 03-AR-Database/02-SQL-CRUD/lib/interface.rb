@@ -3,6 +3,7 @@ require_relative "crud"
 def ask_and_get(param)
   puts "What is the #{param} for your post?"
   gets.chomp
+
 end
 
 db_path = "lib/db/news.sqlite"
@@ -28,7 +29,7 @@ while true
   when 1
     name = ask_and_get("name")
     source_url = ask_and_get("source url")
-    rating = ask_and_get("rating")
+    rating = ask_and_get("rating (from 1 to 5)")
     post = { name: name, source_url: source_url, date: Time.now, rating: rating }
     create_post(db, post)
   when 2
