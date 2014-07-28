@@ -1,5 +1,5 @@
 class CreatePosts < ActiveRecord::Migration
-  def up
+  def change
     #TODO: your code here to create the Posts table
     create_table :posts do |t|
       t.string :name
@@ -8,4 +8,3 @@ class CreatePosts < ActiveRecord::Migration
     end
   end
 end
-
