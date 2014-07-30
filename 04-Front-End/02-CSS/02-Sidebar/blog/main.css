@@ -1,5 +1,36 @@
 .container {
   margin: 0 auto;
   width: 840px;
-	font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
+
+nav ul
+{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+
+
+nav{
+  padding-top: 20px;
+  float: left;
+  width: 120px;
+  border-top: 1px solid grey;
+}
+
+.content{
+  float: right;
+  width: 679px;
+  padding-left: 40px;
+  border-left: 1px solid grey;
+  border-top: 1px solid grey;
+
+}
+
+footer{
+  clear:both;
+  padding: 30px;
+  border-top: 1px solid grey;
+}
+
