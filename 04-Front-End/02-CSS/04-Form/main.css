@@ -1,6 +1,58 @@
 .container {
-  margin: 0 auto;  
+  margin: 0 auto;
+  width: 500px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 840px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+header{
+  background: red;
+  color: black;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0;
+}
+
+header h1{
+  display: inline-block;
+  width: 500px;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+nav{
+  display: inline-block;
+}
+
+
+nav a{
+  display: inline-block;
+  width: 100px;
+  line-height: 100px;
+  color: green;
+}
+
+.content{
+  padding-top: 110px;
+}
+
+
+.nav-content{
+  margin: 0 auto;
   width: 840px;
 }
 
-/*Add some CSS rules to design your form */ 
+.post{
+  display: inline-block;
+  width: 500
+}
+
+
+
