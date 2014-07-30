@@ -25,7 +25,7 @@ end
 
 def list_posts(user)
   # TODO: use ActiveRecord to get all posts of the current user
-  user.each do |post|
+  user.posts.each do |post|
     puts '%-5d %-15s %-20s %-30s %-5d' % [post['id'], post['name'], post['source_url'], post['date'], post['rating']]
   end
 end
