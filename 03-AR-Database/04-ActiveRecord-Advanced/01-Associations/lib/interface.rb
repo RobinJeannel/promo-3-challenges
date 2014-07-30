@@ -4,8 +4,11 @@ require_relative 'models/user'
 
 User.where(name: 'toto', email: 'toto@toto.com').first_or_create
 
+<<<<<<< HEAD
 p User.last
 
+=======
+>>>>>>> 04242d87f5696ce4357c665e534a2fa32f5a9830
 def ask(prompt)
   print "#{prompt} "
   gets.to_s.chomp
