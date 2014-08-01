@@ -1,0 +1,63 @@
+
+.partie1{
+  background-image: url(http://www.iceme.fr/images/background/background.jpg);
+  font-family: 'Open Sans';
+  background-size: cover;
+  height: 650px
+}
+
+
+body{
+  background-image: url(http://www.iceme.fr/images/grid.jpg);
+}
+
+.section-icone{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.X{
+  padding-top: 10px;
+  padding-bottom: 100px;
+}
+.inscription{
+  color: black;
+}
+
+.Y{
+  padding-top: 60px;
+
+}
+.Y a{
+  color: #ccc;
+}
+
+.partie1 h1{
+  padding-top: 150px;
+  color: white;
+}
+
+h2{
+  color: white;
+}
+
+.footerIceme{
+  text-align: center;
+  color: grey;
+  padding-top: 60px
+}
+
+.adresse {
+  color: black;
+}
+
+footer{
+  height: 150px;
+  background-color: black;
+}
+
+.vertical-spacer{
+  height: 6em;
+}
+
+
